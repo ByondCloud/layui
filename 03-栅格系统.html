@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栅格系统</title>
+    <link rel="stylesheet" href="./css/layui.css">
+</head>
+<body>
+
+<!--    1.定义行-->
+<!--    2.定义列-->
+<!--    3.定义分区，layui将屏幕十二等分，-->
+<!--    4.通过md，xs等配置，来动态匹配对应设备的栅格系统-->
+<!--    5.列边距 layui-col-space* 【*代表的是px值 0-30之间所有的双数 + 1，5，15，25】   -->
+<!--    6.列偏移 layui-col-offset* 【*代表的是px值 0-12之间】-->
+<!--    7.列嵌套 在列中嵌套，内部列也有12个栅格，如果超过就跳到下一行--->
+
+<!--    布局容器-->
+    <div class="layui-container">
+
+<!--        定义行-->
+        <div class="layui-row">
+<!--            定义列 md5为5/12-->
+            <div class="layui-col-md5" style="background-color: red">
+                内容的十二分之五
+            </div>
+            <div class="layui-col-md7" style="background-color: yellow">
+                内容的十二分之七
+            </div>
+        </div>
+
+        <div class="layui-row">
+            <!--            定义列 md5为5/12-->
+            <div class="layui-col-md4" style="background-color: pink">
+                内容的十二分之四
+            </div>
+            <div class="layui-col-md4" style="background-color: aqua">
+                内容的十二分之四
+            </div>
+        </div>
+
+        <div class="layui-row">
+            <!--            定义列 md5为5/12-->
+            <div class="layui-col-md8" style="background-color: burlywood">
+                内容的十二分之八
+            </div>
+            <div class="layui-col-md8" style="background-color: chartreuse">
+                内容的十二分之八
+            </div>
+        </div>
+
+
+
+<!---------------------------------------响应式栅格系统------------------------------------------------>
+        <div class="layui-row">
+            <!--            定义列 md5为5/12-->
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md4" style="background-color: burlywood">
+                移动：6/12 | 平板：6/12 | 桌面：4/12
+            </div>
+        </div>
+
+<!---------------------------------------列边距------------------------------------------------------>
+
+        <hr />
+        <h3>列边距</h3>
+        <div class="layui-row layui-col-space20">
+            <div class="layui-col-md4">
+                <div style="background-color: chartreuse">
+                    内容的十二分之四
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div style="background-color: darkblue">
+                    内容的十二分之四
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div style="background-color: #eb7350">
+                    内容的十二分之四
+                </div>
+            </div>
+        </div>
+
+<!---------------------------------------列偏移------------------------------------------------------->
+
+        <hr/>
+        <h3>列偏移</h3>
+        <div class="layui-row">
+            <div class="layui-col-md4">
+                <div style="background-color: #5FB878">
+                    内容的十二分之四
+                </div>
+            </div>
+            <div class="layui-col-md4 layui-col-md-offset1">
+                <div style="background-color: gold">
+                    内容的十二分之四,向右移动1个栅格
+                </div>
+            </div>
+        </div>
+
+
+<!---------------------------------------列嵌套------------------------------------------------------->
+
+        <hr/>
+        <h3>列嵌套</h3>
+        <div class="layui-row">
+            <div class="layui-col-md6">
+                <div style="background-color: hotpink">
+<!--                    第一个嵌套-->
+                    <div class="layui-col-md6">
+                        <div style="background-color: gold">
+                            内部列 6栅格
+                        </div>
+                    </div>
+<!--                    第二个嵌套-->
+                    <div class="layui-col-md6">
+                        <div style="background-color: indianred">
+                            内部列 6栅格
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="layui-col-md6">
+                <div style="background-color: khaki">
+                    外部列 6栅格
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+</html>
